@@ -23,14 +23,21 @@ You need to ensure that IkiWiki can see both of those modules, e.g. put (or syml
 
 The `[[!irclog]]` directive takes the following arguments:
 
-`location`::
-	The URI of your IRC log file. Currently the URI schemes `file:`, `http:`, and `ssh:` have been implemented. Only `ssh:` has been tested: `ssh://host/path/to/#channel`.
-`earliest`::
-	A date/time in the format `%F %T` (i.e. `YYYY-MM-DD HH:MM:SS`). Events before this time will not be included. String comparison is used, so you can omit portions of the date/time if you like, e.g. `YYYY-MM`
-`latest`::
-	A date/time. Events after this time will not be included.
-`keywords`::
-	A mapping of keywords to translations, formatted like a Perl hash, e.g.: `richard=>[[richard]]`. In this case occurrences of "richard" will be replaced with "[[richard]]" (which will later be processed as a WikiLink).
+`location`
+
+The URI of your IRC log file. Currently the URI schemes `file:`, `http:`, and `ssh:` have been implemented. Only `ssh:` has been tested: `ssh://host/path/to/#channel`.
+
+`earliest`
+
+A date/time in the format `%F %T` (i.e. `YYYY-MM-DD HH:MM:SS`). Events before this time will not be included. String comparison is used, so you can omit portions of the date/time if you like, e.g. `YYYY-MM`.
+
+`latest`
+
+A date/time. Events after this time will not be included.
+
+`keywords`
+
+A mapping of keywords to translations, formatted like a Perl hash, e.g.: `richard=>[[richard]]`. In this case occurrences of "richard" will be replaced with "[[richard]]" (which will later be processed as a WikiLink).
 
 ## Limitations
 
